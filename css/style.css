@@ -3,6 +3,7 @@
     padding: 0px;
     margin: 0px;
     border: none;
+    text-decoration: none;
 }
 
 *,
@@ -79,8 +80,45 @@ img {
     color: #001E64;
 }
 
+.phone:hover path{
+    fill: #001E64;
+}
+
 .menu__link:hover {
     border-bottom: 1px solid #001E64;
+}
+
+.menu__btn {
+    width: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 13px 0;
+    position: relative;
+    display: none;
+}
+
+.menu__btn::after,
+.menu__btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #001E64;
+}
+
+.menu__btn::before {
+    top: 0;
+}
+
+.menu__btn::after {
+    bottom: 0;
+}
+
+.menu__btn span {
+    display: block;
+    height: 4px;
+    background-color: #001E64;
 }
 
 /* header content */
@@ -182,12 +220,17 @@ img {
     margin-left: 112px;
     display: inline-block;
     transform: translateY(-100px);
-    margin-top: -100px;
+    transition: all .3s;
+}
+
+.header__content-btn:hover {
+    background-color: rgb(255, 255, 255, 1);
+    color: #001E64;
 }
 
 .header__content-box {
     display: flex;
-    margin-left: 100%;
+    justify-content: flex-end;
     margin-right: 30px;
     font-size: 18px;
     line-height: 21px;
@@ -202,7 +245,7 @@ img {
 /* product */
 
 .product {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .product__inner {
@@ -218,7 +261,7 @@ img {
 
 .product__name-item {
     font-family: 'Roboto Slab', serif;
-    font-style: 24px;
+    font-size: 24px;
     line-height: 32px;
     font-weight: 400;
     cursor: pointer;
@@ -303,8 +346,460 @@ img {
     border: 1px solid #001E64;
     border-radius: 20px;
     cursor: pointer;
+    transition: all .3s;
+}
+
+.product__content-btn:hover {
+    background-color: #001E64;
+    color: #fff;
+}
+
+/* seafood-box */
+.seafood-box {
+    background-image: url(../images/seafood_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 200px 0 95px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.container {}
+
+.seafood-box__items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.seafood-box__item {
+    width: 170px;
+    min-height: 165px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../images/seafood_decor.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.seafood {
+    padding: 100px 0;
+}
+
+.seafood__items {
+    margin-bottom: 100px;
+}
+
+.seafood__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.seafood__item-content {}
+
+.seafood__item-title {
+    max-width: 490px;
+    margin-bottom: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #001E64;
+}
+
+.seafood__item-text {
+    max-width: 420px;
+    margin-bottom: 20px;
+}
+
+.seafood__item-right .seafood__item-title {
+    max-width: 420px;
+}
+
+.seafood__item-right .seafood__item-content {
+    margin-right: 180px;
+}
+
+.seafood__item-img {}
+
+.seafood__dlockquote {
+    margin-right: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seafood__dlockquote-img {}
+
+.seafood__dlockquote-text {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+/* contackts */
+
+.contackts {
+    background-image: url(../images/contackts__bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.contackts__box {
+    margin-left: auto;
+    width: 390px;
+    background-color: #fff;
+    padding: 33px 0 33px 20px;
+}
+
+.contackts__box-text {
+    width: 195px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #001E64;
+}
+
+.contackts__box-list {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.contackts__box-item {
+    margin-top: 30px;
+}
+
+.contackts__box-item span {
+    display: block;
+}
+
+/* footer */
+
+
+.footer {
+    padding: 25px 0 110px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 45px 0 23px;
+}
+
+.footer__inner .menu {
+    padding-bottom: 30px;
+}
+
+.footer-social__list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-social__item+.footer-social__item {
+    margin-left: 10px;
+}
+
+.footer-social__link path {
+    transition: all .3s;
+}
+
+.footer-social__link:hover path {
+    fill: #001E64;
+}
+
+.menu__link-footer {
+    color: #232222;
 }
 
 
+@media (max-width: 1200px) {
+    .product__name {
+        width: 350px;
+    }
+
+    .footer .logo,
+    .footer .menu{
+        display: none;
+    }
+
+    .footer{
+        padding: 40px 0 40px;
+    }
+
+    .footer__inner{
+        justify-content: center;
+    }
+
+    .footer-social__list{
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .seafood__item-content{
+        padding-right: 20px;
+    }
+
+    .seafood__item-right .seafood__item-content{
+        padding-right: 0;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu__list {
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        top: -370px;
+        transition: all .5s;
+    }
+
+    .menu__list.menu__list--active {
+        top: 75px;
+        z-index: 5;
+    }
+
+    .menu__btn {
+        display: block;
+        z-index: 10;
+    }
+
+    .menu {
+        margin: 12px 20px 0 auto;
+        margin-left: auto;
+    }
+
+    .menu__item+.menu__item {
+        margin-left: 0;
+    }
+
+    .menu__link {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .menu__link:hover {
+        border: none;
+    }
+
+    .product__name {
+        width: 250px;
+    }
+
+    .seafood-box{
+        margin-top: -80px;
+    }
+
+    .seafood{
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 930px) {
+    .product__inner {
+        display: block;
+    }
+
+    .product__content {
+        margin: 0 auto;
+    }
+
+    .product__name {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 70px;
+    }
+
+    .product__name-item+.product__name-item {
+        margin-top: 0;
+    }
+
+    .product__name-item.slick-current {
+        line-height: 44px;
+    }
+
+    .product__name .slick-dots {
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .product__name .slick-dots button {
+        width: 10px;
+        height: 10px;
+        background-color: #858585;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+        margin: 40px 10px;
+    }
+
+    .product__name .slick-active button {
+        background-color: #001E64;
+    }
+
+    .seafood img{
+        max-width: 100%;
+    }
+
+    .seafood__item{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    .seafood__item-right{
+        flex-wrap: wrap-reverse;
+    }
+
+    .seafood__item-content{
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .seafood__item-right .seafood__item-content{
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .seafood__item-title,
+    .seafood__item-text{
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .seafood__item-right .seafood__item-content{
+        margin-right: 0;
+    }
+}
 
 
+@media (max-width: 745px) {
+    .title {
+        font-size: 50px;
+        line-height: 66px;
+        padding-left: 0px;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .seafood-box__items{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+    .product__content{
+        width: 100%;
+    }
+
+    .seafood-box{
+        display: none;
+    }
+
+    .seafood{
+        padding: 50px 0;
+        margin-top: -100px;
+    }
+
+    .seafood-box__items{
+        margin-bottom: 50px;
+    }
+
+    .contackts{
+        background-image: none;
+    }
+
+    .contackts__box{
+        width: 100%;
+        padding: 33px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .product__content-box{
+        display: block;
+    }
+}
+
+@media (max-width: 470px) {
+    .title {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .header-slider {
+        padding-left: 50px;
+    }
+
+    .slick-dots {
+        left: 5px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        left: 9px;
+    }
+
+    .header__content-btn {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        padding-top: 140px;
+    }
+
+    .phone {
+        margin-right: 0;
+    }
+
+    .logo {
+        margin-left: 0px;
+    }
+
+    .menu__list {
+        left: 10%;
+        right: 10%;
+    }
+
+    .header-slider {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .header__content-btn {
+        margin-left: 0;
+    }
+
+    .product__content-btn{
+        padding: 12px 55px;
+    }
+
+    .product{
+        padding-top: 50px;
+    }
+
+    .seafood__item{
+        text-align: left;
+    }
+}
