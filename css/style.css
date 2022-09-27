@@ -369,8 +369,6 @@ img {
     color: #fff;
 }
 
-.container {}
-
 .seafood-box__items {
     display: flex;
     justify-content: space-around;
@@ -404,8 +402,6 @@ img {
     margin-bottom: 50px;
 }
 
-.seafood__item-content {}
-
 .seafood__item-title {
     max-width: 490px;
     margin-bottom: 30px;
@@ -429,15 +425,11 @@ img {
     margin-right: 180px;
 }
 
-.seafood__item-img {}
-
 .seafood__dlockquote {
     margin-right: 800px;
     margin: 0 auto;
     text-align: center;
 }
-
-.seafood__dlockquote-img {}
 
 .seafood__dlockquote-text {
     font-size: 18px;
